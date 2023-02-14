@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+
+option go_package="./pb";
+
+
+service User{
+	rpc Insert (UserRequest) returns (UserResponse){}
+	rpc Update (UserRequest) returns (UserResponse){}
+	rpc Delete (UserRequest) returns (UserResponse){}
+	rpc Find (UserRequest) returns (UserResponse){}
+}
+
+
+message UserRequest{
+	string name = 1;
+}
+
+
+message UserResponse{
+	string name = 1;
+}
